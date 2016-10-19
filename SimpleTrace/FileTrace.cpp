@@ -27,14 +27,14 @@ void FileTrace::Initialize(const char * sfileName)
 	m_fileName.empty(); 
 	m_fileName += sfileName; 
 
-	if(bisInit)
+	if(m_bisInit)
 	{
 		m_Mutex.unlock(); 
 		return; 
 	}
 
 	
-	bisInit = true; 
+	m_bisInit = true; 
 
 	m_Mutex.unlock(); 
 

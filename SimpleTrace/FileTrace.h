@@ -6,7 +6,9 @@
 
 class FileTrace
 {
-
+	static std::string m_fileName; 
+	static bool m_bisInit; 
+	static std::mutex m_Mutex; 
 	std::fstream m_fs; 
 public:
 	FileTrace(void);
@@ -19,6 +21,6 @@ public:
 
 };
 
-static std::string m_fileName; 
-static bool bisInit; 
-static std::mutex m_Mutex; 
+std::string FileTrace::m_fileName; 
+bool FileTrace::m_bisInit; 
+std::mutex FileTrace::m_Mutex; 
